@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <div class="whole">
+      <main>
+
+        <header>
+          <h1 id="title">Survey Form</h1>
+          <h3>Eco Wear</h3>
+          <div class="header-container">
+            <p id="description">
+              At <strong>Eco Wear</strong>, we are committed to fulfilling our customers' needs, and providing a pleasant shopping experience.
+    
+              <span class="new-line">Please fill in the form below to help us improve.</span>
+            </p>
+            <img src="./img/Rpb_clothing_icon.png" alt="eco wear logo"/>
+            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Rpb_clothing_icon.svg" alt="eco wear logo"/>-->
+          </div>
+        </header>
+  
+        <form id="survey-form" action="" method="post">
+  
+          <div class="container">
+            <section id="personal-info">
+              <h2>Personal Information</h2>
+  
+              <div class="form-group">
+                <label id="name-label" class="main-label" for="name">Name</label>
+                <input 
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+  
+              <div class="form-group">
+                <label id="email-label" class="main-label" for="email">Email</label>
+                <input 
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+  
+              <div class="container" id="age-sex">
+                <div class="container-col">
+                  <label id="number-label" class="main-label" for="age">Age</label>
+                  <input 
+                    type="number"
+                    id="number"
+                    name="age"
+                    min="10"
+                    max="120"
+                    placeholder="Age"
+                    required
+                  />
+                </div>
+                <div class="container-col" id="age-sex">
+                  <label id="sex-label" class="main-label" for="sex">Sex</label>
+                  <select id="dropdown" name="sex">
+                    <option value="">Male</option>
+                    <option value="1">Female</option>
+                    <option value="2">Other</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label id="region-label" class="main-label" for="region">Region</label>
+                <select id="dropdown" name="region">
+                  <option value="">Select your Region</option>
+                  <option value="1">Africa</option>
+                  <option value="2">Asia</option>
+                  <option value="3">Australia</option>
+                  <option value="4">Europe</option>
+                  <option value="5">North America</option>
+                  <option value="6">South America</option>
+                </select>
+              </div>
+              
+            </section>
+            <section id="shopping-habits">
+  
+                <h2>Shopping with Us</h2>
+                <div class="form-group">
+                  <fieldset class="fset visits">
+                    <legend class="main-label">Visits per month<br>
+                      <small>(Select one)</small></legend>
+                    <div class="option">
+                      <input 
+                        type="radio"
+                        id="visits-per-month-1"
+                        name="visits-per-month"
+                        value="1"
+                        checked
+                      />
+                      <label class="inline" for="visits-per-month">One</label>
+                    </div>
+                    <div class="option">
+                      <input 
+                        type="radio"
+                        id="visits-per-month-2"
+                        name="visits-per-month"
+                        value="2"
+                      />
+                      <label class="inline" for="visits-per-month">Two</label>
+                    </div>
+                    <div class="option">
+                      <input 
+                        type="radio"
+                        id="visits-per-month-3"
+                        name="visits-per-month"
+                        value="3"
+                      />
+                      <label class="inline" for="visits-per-month">Three</label>
+                    </div>
+                    <div class="option">
+                      <input 
+                        type="radio"
+                        id="visits-per-month-4"
+                        name="visits-per-month"
+                        value="4"
+                      />
+                      <label class="inline" for="visits-per-month">Four</label>  
+                    </div>
+                    <div class="option">
+                      <input 
+                        type="radio"
+                        id="visits-per-month-5"
+                        name="visits-per-month"
+                        value="5"
+                      />
+                      <label class="inline" for="visits-per-month">Five+</label>  
+                    </div>
+                  </fieldset>
+  
+                  <fieldset class="fset prefs">
+                    <legend class="main-label">Preferred products<br>
+                      <small>(Select all that apply)</small></legend>
+                    <div class="option">
+                      <input
+                        type="checkbox"
+                        id="range-1"
+                        name="preferred-product-ranges"
+                        value="clothes"
+                      />
+                      <label class="inline" for="range-1">Clothes</label>
+                    </div>
+                    <div class="option">
+                      <input
+                        type="checkbox"
+                        id="range-2"
+                        name="preferred-product-ranges"
+                        value="shoes"
+                      />
+                      <label class="inline" for="range-2">Shoes</label>
+                    </div>
+                    <div class="option">
+                      <input
+                        type="checkbox"
+                        id="range-3"
+                        name="preferred-product-ranges"
+                        value="hats"
+                      />
+                      <label class="inline" for="range-3">Hats</label>
+                    </div>
+                    <div class="option">
+                      <input
+                        type="checkbox"
+                        id="range-4"
+                        name="preferred-product-ranges"
+                        value="bags"
+                      />
+                      <label class="inline" for="range-4">Bags</label>
+                    </div>
+                    <div class="option">
+                      <input
+                        type="checkbox"
+                        id="range-5"
+                        name="preferred-product-ranges"
+                        value="accessories"
+                      />
+                      <label class="inline" for="range-5">Accessories</label>
+                    </div>
+                  </fieldset>
+
+                </div>
+                <div class="form-group">
+
+                  <fieldset class="fset rec">
+                    <legend class="main-label">Would you recommend us to a friend?</legend>
+                    <div class="option inline">
+                      <input 
+                        type="radio",
+                        id="rec-to-friend-1",
+                        name="rec-to-friend",
+                        value="yes"
+                      />
+                      <label class="inline" id="rec-yes" for="rec-to-friend-1">Yes</label>
+                    </div>
+                    <div class="option inline">
+                      <input 
+                        type="radio",
+                        id="rec-to-friend-2",
+                        name="rec-to-friend",
+                        value="no"
+                      />
+                      <label class="inline" id="rec-no" for="rec-to-friend-2">No</label>
+                    </div>
+
+                  </fieldset>
+
+                </div>
+  
+            </section>
+          </div>
+
+          <div class="container">
+            <section id="additional-info">
+  
+                <h2>Additional Information</h2>
+                <label class="main-label" for="comments">Comments <small>(optional)</small></label>
+                <textarea
+                  id="comments"
+                  name="comments"
+                  cols="30"
+                  rows="10"
+                  placeholder="Your comments here..."
+                ></textarea>
+              
+              <div class="form-group">
+                <fieldset class="fset">
+                  <legend class="main-label">Newsletter</legend>
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    value="subscribe"
+                  />
+                  <label class="main-label inline" for="newsletter">Subscribe to our monthly offers!</label>
+                </fieldset>
+                
+                <div class="container-col">
+                  <button id="submit" value="Submit">SUBMIT</button>
+                </div>
+              </div>
+              
+            </section>
+          </div>
+  
+        </form>
+  
+      </main>
+    </div>
+    
+  </body>
+
+</html>
