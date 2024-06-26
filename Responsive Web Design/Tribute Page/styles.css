@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Sevillana&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+  --background: #0a0a23;
+  --bg-main: #151041;
+  --bg-overlay: #c6d0f5;
+  --text-light-normal: #c6d0f5;
+  --text-dark-normal: #0a0a23;
+  --text-link: #382f92;
+  --shadow: #4c4494;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/*
+* Basic Setup
+*/
+html {
+  margin: 0;
+
+  color: var(--text-light-normal);
+  font-family: Tahoma, sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+body {
+  background: var(--background);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+main {
+  background: var(--bg-main);
+  margin: 0;
+  padding: 40px 0;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover, a:active {
+  color: var(--text-link);
+}
+
+/*
+* HEADER
+*/
+header {
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 50px;
+
+  background: var(--background);
+  color: var(--text-light-normal);
+}
+
+header > h2 {
+  width: 200px;
+  max-width: 25%;
+
+  margin: 2rem;
+
+  font-size: min(5vw, 1.8rem);
+  text-align: left;
+}
+
+nav {
+  width: 41%;
+  height: 50px;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav > ul > li {
+  display: block;
+  margin: 0 0.2rem;
+  padding: 0.3rem 0.7rem;
+}
+
+nav > ul > li:hover {
+  background-color: var(--bg-overlay);
+  color: var(--text-dark-normal);
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#title {
+  margin: 50px 0;
+  font-family: "Tangerine", serif;
+  font-size: 128px;
+  text-shadow: 4px 4px 4px var(--shadow);
+  animation: title-glow 2s ease-in-out infinite alternate;
+}
+
+ /* 
+ **ANIMATION 
+ */
+@keyframes title-glow {
+  from {
+    text-shadow: 0 0 10px white, 0 0 30px #151041;
+  }
+
+  to {
+    text-shadow: 0 0 20px white, 0 0 30px #382f92;
+  }
+}
+
+/* 
+ * MAIN 
+ */
+
+#img-div {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 30px 30px;
+
+  background: linear-gradient(90deg, #151041,  #2b2193, #382f92, #2b2193 , #151041);
+}
+
+#image {
+  display: block;
+
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  margin: 0 auto;
+
+  border-radius: 10%;
+  box-shadow: 0 0 5px 5px var(--shadow);
+}
+
+figcaption {
+  max-width: 70%;
+
+  margin: 0 auto;
+  padding-top: 20px;
+
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+#tribute-info {
+  max-width: 70%;
+
+  margin: 6rem auto 0;
+}
+
+#about, #timeline, #discography {
+  padding-top: 60px;
+}
+
+.section-title {
+  margin: 0 auto;
+
+  background: linear-gradient(90deg, #151041,  #2b2193, #382f92, #2b2193 , #151041);
+  text-transform: uppercase;
+}
+
+#tribute-info p, #tribute-info ul {
+  margin: 6rem auto 0;
+}
+
+/*
+* TIMELINE
+*/
+#timeline > ul {
+  text-align: left;
+}
+
+#timeline > ul > li {
+  margin: 16px 0;
+}
+
+/*
+* DISCOGRAPHY
+*/
+.discography-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#discography > p {
+  padding-bottom: 50px;
+}
+
+.discography-list > div {
+  width: 100%;
+  max-width: 40%;
+}
+
+summary {
+  width: 100%;
+  max-width: 85%;
+  
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  border-bottom: 5px ridge #382f92;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.discography-list ol {
+  text-align: left;
+}
+
+.discography-list ol li {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 50px;
+  height: 100%;
+  max-height: 50px;
+
+  margin: 0 10px 10px 0;
+  padding: 0;
+
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 2px 2px var(--shadow);
+}
+
+/*
+* READ MORE
+*/
+.read-more {
+  max-width: 70%;
+
+  margin: 0 auto;
+
+  text-align: right;
+  font-style: italic;
+}
+
+/*
+* FOOTER
+*/
+footer {
+  text-align: left;
+  padding: 5px 5px;
+}
+
+/*
+* Media Queries (Desktop First)
+*/
+
+/* 992px */
+@media only screen and (max-width: 770px) {
+  header, nav {
+    height: 100px;
+  }
+}
